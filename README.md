@@ -2,7 +2,7 @@
 
 This project uses webot simulator and the epuck robot to follow a line. The camera sensor is used to do the task.
 
-![alt text for screen readers](line_follower.png)
+![alt text for screen readers](line_follower.gif)
 
 > [Epuck line follower video](https://webots.cloud/AcTt0P8)
 
