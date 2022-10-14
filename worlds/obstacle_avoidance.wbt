@@ -1,0 +1,81 @@
+#VRML_SIM R2022b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.39858598557026603 0.044183543776338735 0.9160660601541486 2.9392003734417367
+  position 0.3951809793479717 -0.06421097632336568 0.45347638318316097
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Robot {
+  children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+      endPoint Solid {
+        name "solid(1)"
+      }
+    }
+    DEF Body Transform {
+      translation 0 0.0415 0.0415
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 1
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.08
+            radius 0.045
+          }
+        }
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        anchor 0.045 0.025 0.025
+      }
+      device [
+        DEF motor1 RotationalMotor {
+        }
+      ]
+      endPoint Solid {
+        translation 0.045 0.025 0.025
+        rotation 0 1 0 1.57
+        children [
+          DEF wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.01
+              radius 0.025
+            }
+          }
+        ]
+        boundingObject USE wheel
+        physics DEF wheel_physics Physics {
+        }
+      }
+    }
+  ]
+  boundingObject USE Body
+  physics Physics {
+  }
+}
