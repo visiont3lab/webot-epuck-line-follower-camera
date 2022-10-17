@@ -1,0 +1,103 @@
+#VRML_SIM R2022b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/balls/protos/Ball.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/obstacles/protos/OilBarrel.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.30233857440255085 0.02854995086214566 0.9527729460548312 2.9621437370880654
+  position 4.296076804455394 -0.8992313342965216 3.5340594786964754
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0.0791768 -0.0119799 0
+  rotation 0 0 -1 0.0981751
+  floorSize 1 1.5
+  floorAppearance PBRAppearance {
+    roughness 1
+    roughnessMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/textures/parquetry/chequered_parquetry_roughness.jpg"
+      ]
+    }
+    metalness 0
+    normalMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/textures/parquetry/chequered_parquetry_normal.jpg"
+      ]
+    }
+    occlusionMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/textures/parquetry/chequered_parquetry_occlusion.jpg"
+      ]
+    }
+  }
+}
+OilBarrel {
+  translation 0.09011749999999998 -0.404344 0.04980383027115548
+  rotation -0.682655881540384 0.37278022582972387 -0.6285028644554145 1.2847069392550005e-16
+  height 0.1
+  radius 0.05
+  physics Physics {
+    mass 0.5
+  }
+}
+Ball {
+  translation 0.2993576942206659 -0.10510003349138752 0.096861262869843
+  rotation -3.3700177298377797e-06 -6.425293438046721e-08 -0.9999999999943194 0.6214716864234535
+  radius 0.1
+  mass 2
+}
+E-puck {
+  hidden linearVelocity_0 -0.09936472160216919 0.0111881498117212 5.638143279004189e-09
+  hidden angularVelocity_0 5.5084695510084126e-05 0.0004893343850203408 -8.909570603884996e-09
+  hidden translation_1 0 0.026000000000000013 0.02
+  hidden rotation_1 0 -0.9999999999999999 0 0.8756643280348726
+  hidden linearVelocity_1 -0.09936227532909869 0.011187874789819093 3.3455338063239794e-10
+  hidden angularVelocity_1 -0.5593937986069143 -4.968113783874038 8.438690038363079e-08
+  hidden translation_2 0 -0.02599999999999998 0.02
+  hidden rotation_2 0 -1 0 1.81178995807727
+  hidden linearVelocity_2 -0.09936227557239817 0.01118787410379338 -3.052175765658846e-10
+  hidden angularVelocity_2 -0.55939365050553 -4.968113800556424 -1.0212568968579416e-07
+  translation 0.2608459420279828 0.2806553825077131 -6.394940472429812e-05
+  rotation -0.0005623865146719989 3.15616578477737e-05 -0.9999998413626223 -3.029468120156035
+  controller "class_obstactle_avoidance"
+  camera_width 128
+  camera_height 128
+}
+WoodenBox {
+  translation 0.0564168 -0.04867390000000004 0.049803830271155494
+  rotation -0.9387605637968521 -0.3352716299277257 -0.07950810037613947 1.9073742157138067e-16
+  size 0.1 0.1 0.1
+  mass 0.5
+}
+WoodenBox {
+  translation -0.22487070529936215 0.3121329984444692 0.049803830271155494
+  rotation 1.2497653209813895e-17 5.888998229217278e-17 -1 2.0915011415807725
+  name "wooden box(2)"
+  size 0.35 0.1 0.1
+  mass 0.5
+}
+WoodenBox {
+  translation -0.290208 -0.189342 0.049803830271155446
+  rotation -3.490300410670107e-17 -2.6622667188592393e-17 1 -2.094395307179586
+  name "wooden box(3)"
+  size 0.05 0.1 0.1
+  mass 0.5
+}
+WoodenBox {
+  translation 0.201552 -0.536844 0.0460763
+  rotation 2.6959712679904354e-07 1.1336863717176606e-07 0.9999999999999571 0.7683026480318887
+  name "wooden box(1)"
+  size 0.25 0.15 0.1
+  mass 10
+}
